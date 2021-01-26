@@ -1,17 +1,38 @@
   .tweet-button {
     font-family: 'Bungee', sans-serif;
+    border: none;
     background-color: #4056A1;
+    color: #ffffff;
   }
 
   .submit {
+    font-family: 'Bungee', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+    padding-top: 5px;
     display: flex;
     justify-content: space-between;
   }
 
   #tweet-text {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    resize: none;
+    overflow: auto;
+    background-color: transparent;
     border-bottom: 2px solid black;
+    line-height: 1;
   }
   
-  .counter {
-    font-family: 'Bungee', sans-serif;
-  }
+
+
+
+   /* .submission {
+    padding-top: 15px;
+    margin-top: 10px;
+  } */
+
+  
