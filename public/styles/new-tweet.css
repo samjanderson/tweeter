@@ -5,13 +5,17 @@
     color: #ffffff;
   }
 
-  .submit {
+  .submit-tweet {
     font-family: 'Bungee', sans-serif;
     font-size: 16px;
     margin-top: 5px;
     padding-top: 5px;
     display: flex;
     justify-content: space-between;
+  }
+
+  .tweet-button, .submit {
+    font-family: 'Bungee', sans-serif;
   }
 
   #tweet-text {
