@@ -14,12 +14,18 @@ html {
  * Global layout stuff
  */
 
+.container {
+  width: 90%;
+  align-self: center;
+}
 
 body {
+  display: flex;
+  flex-direction: column;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /*
