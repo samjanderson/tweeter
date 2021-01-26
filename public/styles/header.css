@@ -1,10 +1,10 @@
 header {
-  height: 400px;
-  width: 100%;
   display: flex;
   background-color: lightsteelblue;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 400px;
+  width: 100%;
   background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
 }
