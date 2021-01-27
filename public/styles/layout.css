@@ -28,6 +28,43 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+/* //SUBMITTED TWEET SECTION */
+/* SUBMITTED TWEET SECTION */
+.submitted-tweet {
+  border: 3px solid #545149;
+}
+
+.tweet-header {
+  background-color: #F0EFEB;
+  background-image: none;
+  /* border: 3px solid green; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+
+}
+.tweet-user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.composed-tweet-message {
+  border-bottom: 2px solid #545149;
+}
+
+.tweet-footer {
+  /* border: 3px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+}
+
+.composed-tweeter-icons {
+  display: flex;
+  align-items: center;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
