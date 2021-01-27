@@ -32,9 +32,14 @@ const loadTweets = function () {
 const submitHandler = function () {
   $("#submit-tweet-form").submit (function (event) {
     event.preventDefault();
-    console.log('text', $(this))
+    // console.log('text', $(this))
     const form = $(this);
     const text = form.serialize()
+    const characterCount = $("#tweet-text").val().length;
+    if (characterCount > 140 || characterCount === 0 || characterCount === null || characterCount === "") {
+      alert("Please make sure your tweet is not emprty or over the character count")
+      return;
+    }
     $.ajax({ 
       method:"POST",
       data: text,
