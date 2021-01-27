@@ -1,14 +1,36 @@
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   background-color: #4056A1;
   color: #ffffff;
   padding: 1.5em;
   position: fixed; 
   top: 0; 
   width: 100%; 
+  height: 100px;
 }
 nav span {
   font-family: 'Bungee', sans-serif;
 }
 
+.write-tweet-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.write-tweet-header {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.write-bold {
+  margin-right: 7px;
+}
+
+ .nav-bar-arrow {
+  color: red;
+} 
