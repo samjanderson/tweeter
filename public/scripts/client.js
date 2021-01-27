@@ -9,6 +9,22 @@
 // });
 
 
+//from lecture
+const submitHandler = function () {
+  $("#submit-tweet-form").submit (function (event) {
+    event.preventDefault();
+    console.log('text', $(this))
+    const form = $(this);
+    const text = form.serialize()
+    $.ajax({ 
+      method:"POST",
+      data: text,
+      url: '/tweets/'
+    }).then(console.log('success'))
+    .catch((error) => {console.log(error)})
+  });
+}
+
 const createTweetElement = function (tweet) {
   const dateObj = new Date(tweet.created_at);
   const today = Date.now(); //generates a number in ms
@@ -69,7 +85,7 @@ const $tweet = createTweetElement(tweetData);
 // const $tweet = $(`<article class="tweet">Hello world</article>`);
 
 
-    const arrObjects = [
+const arrObjects = [
   {
     "user": {
       "name": "Newton",
@@ -91,25 +107,15 @@ const $tweet = createTweetElement(tweetData);
       "text": "Je pense , donc je suis"
     },
     "created_at": 1611680537419
-  },
-  {
-    "user": {
-      "name": "Heyo",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1611680537419
   }
-]
+];
 
 // Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
+// console.log($tweet); // to see what it looks like
 $(document).ready(function () {
   // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
   // console.log($tweet);
-  renderTweets(arrObjects)
+  submitHandler()
+  renderTweets(arrObjects);
 });
 

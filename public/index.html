@@ -46,7 +46,7 @@
     </div>
     <br>
     <!-- change this class name, do something with this -->
-    <div class="username-front-page"> 
+    <div class="username-front-page">
       <h2>Your Name</h2>
     </div>
   </header>
@@ -56,7 +56,7 @@
     <section class="new-tweet">
       <article class="display-tweet">
         <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets/">
+        <form id="submit-tweet-form" method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="submit-tweet">
@@ -67,26 +67,28 @@
         <br>
     </section>
     <section id="tweets-container">
-      <article class="submitted-tweet"> 
-      <header class="tweet-header">
-        <div class="tweet-user-profile">
-          <i class="far fa-grin-beam"></i>
-          <p class="username">Name</p>
-        </div>
-        <span class="user-handle">@username</span>
-      </header>
-      <p class="composed-tweet-message">Tweet sent</p>
-      <footer class="tweet-footer">
-        <p class="date-posted">Date posted</p>
-        <div class="composed-tweeter-icons">
-          <i class="fas fa-flag"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="fas fa-heart"></i>
-        </div>
-      </footer>
+      <article class="submitted-tweet">
+        <header class="tweet-header">
+          <div class="tweet-user-profile">
+            <i class="far fa-grin-beam"></i>
+            <p class="username">Name</p>
+          </div>
+          <span class="user-handle">@username</span>
+        </header>
+        <p class="composed-tweet-message">Tweet sent</p>
+        <footer class="tweet-footer">
+          <p class="date-posted">Date posted</p>
+          <div class="composed-tweeter-icons">
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-heart"></i>
+          </div>
+        </footer>
       </article>
     </section>
   </main>
 </body>
 
 </html>
+
+
