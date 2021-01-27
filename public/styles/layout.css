@@ -28,10 +28,20 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-/* //SUBMITTED TWEET SECTION */
 /* SUBMITTED TWEET SECTION */
+
 .submitted-tweet {
   border: 3px solid #545149;
+  padding: 0 30px;
+  margin: 30px 0;
+}
+.submitted-tweet:hover {
+  box-shadow: 5px 10px #CC8614;
+}
+
+.submitted-tweet:hover .user-handle{
+  display:block;
+  color: #CC8614;
 }
 
 .tweet-header {
@@ -49,8 +59,18 @@ body {
   align-items: center;
 }
 
+.username {
+  padding-left: 20px;
+}
+
+.user-handle {
+  display:none;
+}
+
 .composed-tweet-message {
-  border-bottom: 2px solid #545149;
+  border-bottom: 3px solid #545149;
+  padding-bottom: 25px;
+  margin-bottom: 0px;
 }
 
 .tweet-footer {
@@ -59,12 +79,24 @@ body {
   flex-direction: row;
   justify-content: space-between;
   height: auto;
+  align-items: flex-start;
+  padding-top: 5px;
+}
+
+.tweet-footer i {
+  font-size: 15px;
+}
+
+.date-posted {
+  margin-top: 0px;
+  font-size: 18px;
 }
 
 .composed-tweeter-icons {
   display: flex;
   align-items: center;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+.composed-tweeter-icons i {
+  padding: 0 5px;
+}

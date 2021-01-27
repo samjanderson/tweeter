@@ -5,6 +5,8 @@
     color: #ffffff;
   }
 
+  /* visibility:none;  this still takes up the space*/
+
   .submit-tweet {
     font-family: 'Bungee', sans-serif;
     font-size: 16px;
