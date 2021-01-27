@@ -8,6 +8,37 @@
 //   console.log(event);
 // });
 
+$(document).ready(function () {
+  submitHandler()
+  renderTweets(arrObjects);
+});
+
+
+$("#submit-tweet-form").submit (function (event) {
+
+});
+
+
+const loadTweets = function () {
+  $.ajax({
+    method:"GET",
+    url: '/tweets'
+  }).then(function (resolve, reject) {renderTweets(resolve)}) //something missing here ((resolve, reject) => {resolve('Success!');});
+  .catch((error) => {console.log(error)})
+}
+
+//example from the other day
+// $(function() {
+//   const $button = $('#load-more-posts');
+//   $button.on('click', function () {
+//     console.log('Button clicked, performing ajax call...');
+//     $.ajax('more-posts.html', { method: 'GET' })
+//     .then(function (morePostsHtml) {
+//       console.log('Success: ', morePostsHtml);
+//       $button.replaceWith(morePostsHtml);
+//     });
+//   });
+// });
 
 //from lecture
 const submitHandler = function () {
@@ -29,9 +60,6 @@ const createTweetElement = function (tweet) {
   const dateObj = new Date(tweet.created_at);
   const today = Date.now(); //generates a number in ms
   const timeDiff = Math.floor((today - dateObj) / 1000 / 60 / 60 / 24);
-  // console.log(timeDiff)
-  // console.log(today)
-  // const utcString = dateObj.toUTCString()
   //we create a new DOM element here using jQuery with the $ function
   //next we make each one unique by accessing object and using template literals where needed
   const $tweet = $(`<article class="submitted-tweet"> 
@@ -82,7 +110,6 @@ const tweetData = {
 };
 
 const $tweet = createTweetElement(tweetData);
-// const $tweet = $(`<article class="tweet">Hello world</article>`);
 
 
 const arrObjects = [
@@ -110,12 +137,4 @@ const arrObjects = [
   }
 ];
 
-// Test / driver code (temporary)
-// console.log($tweet); // to see what it looks like
-$(document).ready(function () {
-  // $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-  // console.log($tweet);
-  submitHandler()
-  renderTweets(arrObjects);
-});
 
