@@ -5,6 +5,10 @@
     color: #ffffff;
   }
 
+  .tweet-button:hover {
+    background-color: #c2ba1b;;
+  }
+
   /* visibility:none;  this still takes up the space*/
 
   .submit-tweet {

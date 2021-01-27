@@ -10,7 +10,7 @@
 }
 
 .submitted-tweet:hover .user-handle{
-  display:block;
+  opacity: 1;
   color: #CC8614;
 }
 
@@ -34,7 +34,8 @@
 }
 
 .user-handle {
-  display:none;
+  opacity: 0;
+  align-self: center;
 }
 
 .composed-tweet-message {
