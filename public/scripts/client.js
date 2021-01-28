@@ -62,7 +62,7 @@ const createTweetElement = function (tweet) {
     </div>
     <span class="user-handle">${tweet.user.handle}</span>
   </header>
-  <p class="composed-tweet-message">${tweet.content.text}</p>
+  <p class="composed-tweet-message">${escape(tweet.content.text)}</p>
   <footer class="tweet-footer">
     <p class="date-posted">${timeDiff} days ago</p>
     <div class="composed-tweeter-icons">
@@ -86,6 +86,13 @@ const renderTweets = function (tweets) {
     container.prepend(tweetElement);
   }
 };
+
+//escape function to escape unsafe characters
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 submitHandler()
   loadTweets()
