@@ -9,15 +9,10 @@
 // });
 
 $(document).ready(function () {
-  submitHandler()
-  loadTweets()
-});
+ 
 
-
-$("#submit-tweet-form").submit (function (event) {
-
-});
-
+//combine it with submit handler and once that is complete then we want to use our load tweets function
+//make a submission on the form -> run it through submitHandler function -> if it passes we will call our loadTweets function
 
 const loadTweets = function () {
   $.ajax({
@@ -36,15 +31,19 @@ const submitHandler = function () {
     const form = $(this);
     const text = form.serialize()
     const characterCount = $("#tweet-text").val().length;
-    if (characterCount > 140 || characterCount === 0 || characterCount === null || characterCount === "") {
-      alert("Please make sure your tweet is not emprty or over the character count")
+    if (characterCount > 140) {
+      alert("Please make sure your tweet is not over the 140 character limit. We know you have important things to share so make another tweet!")
+      return;
+    }
+    else if (characterCount === 0 || characterCount === null || characterCount === "") {
+      alert("We know you got knowledge to drop so give us some characters to work with please! The world is in need!")
       return;
     }
     $.ajax({ 
       method:"POST",
       data: text,
       url: '/tweets/'
-    }).then(console.log('success'))    //call loadTweets in here
+    }).then(loadTweets)   //before loadTweets() wasnt working now we put it in an anonymous arrow function and its working
     .catch((error) => {console.log(error)})
   });
 }
@@ -88,6 +87,10 @@ const renderTweets = function (tweets) {
   }
 };
 
+submitHandler()
+  loadTweets()
+
+});
 
 // Test / driver code (temporary). Eventually will get this from the server.
 // const tweetData = {
