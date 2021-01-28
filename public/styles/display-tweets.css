@@ -70,3 +70,15 @@
 .composed-tweeter-icons i {
   padding: 0 5px;
 }
+
+/* Error Message Styling */
+
+
+.error-message {
+  visibility: hidden
+}
+
+.error-message-visible {
+  visibility: visible;
+  width: 100%
+}
