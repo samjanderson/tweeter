@@ -48,6 +48,8 @@ $(document).ready(function () {
         }).then(() => {
           $('#tweets-container').empty();
           loadTweets()
+          $("#tweet-text").val('')
+          $(".counter").text("140");
         })  //before loadTweets() wasnt working now we put it in an anonymous arrow function and its working //is this needed?
           .catch((error) => { console.log(error); });
       }

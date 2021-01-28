@@ -65,6 +65,12 @@
 .composed-tweeter-icons {
   display: flex;
   align-items: center;
+  opacity: 0
+}
+
+.submitted-tweet:hover .composed-tweeter-icons{
+  opacity: 1;
+  color: lightsteelblue;
 }
 
 .composed-tweeter-icons i {
