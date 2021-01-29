@@ -7,7 +7,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Tweet-box"](https://github.com/samjanderson/tweeter/blob/master/docs/desktop-without-chars-error.png?raw=true)
+!["Tweet-box"](https://github.com/samjanderson/tweeter/blob/master/docs/example-tweet.png?raw=true)
 !["Too many characters error"](https://github.com/samjanderson/tweeter/blob/master/docs/desktop-too-many-chars-error.png?raw=true)
 !["No characters error"](https://github.com/samjanderson/tweeter/blob/master/docs/desktop-without-chars-error.png?raw=true)
 
