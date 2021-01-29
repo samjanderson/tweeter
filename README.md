@@ -4,6 +4,14 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
+
+## Final Product
+
+!["Tweet-box"](https://github.com/samjanderson/tweeter/blob/master/docs/desktop-without-chars-error.png?raw=true)
+!["Too many characters error"](https://github.com/samjanderson/tweeter/blob/master/docs/desktop-too-many-chars-error.png?raw=true)
+!["No characters error"](https://github.com/samjanderson/tweeter/blob/master/docs/desktop-without-chars-error.png?raw=true)
+
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
