@@ -6,10 +6,8 @@
   }
 
   .tweet-button:hover {
-    background-color: #c2ba1b;;
+    background-color: mediumpurple;
   }
-
-  /* visibility:none;  this still takes up the space*/
 
   .submit-tweet {
     font-family: 'Bungee', sans-serif;
@@ -45,11 +43,22 @@
     border: 2px solid red;
   }
 
+  /* Error Message Styling */
 
+.error-message {
+  visibility: hidden
+}
 
-   /* .submission {
-    padding-top: 15px;
-    margin-top: 10px;
-  } */
-
+.error-message-visible {
+  visibility: visible;
+  width: 100%;
+  background-color: indianred;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 22px;
+  box-shadow: 5px 5px black;
+  font-weight: 600;
+  text-align: center;
+}
   

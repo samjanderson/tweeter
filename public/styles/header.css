@@ -1,6 +1,6 @@
 #navigation-header {
   display: flex;
-  background-color: lightsteelblue;
+  background-color: mediumpurple;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -8,3 +8,9 @@
   width: 100%;
   background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
 }
+
+
+h2 {
+  color: #4056A1;
+}
+
