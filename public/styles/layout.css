@@ -3,61 +3,88 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    scroll-behavior: smooth;
 }
+
 
 /*
  * Global layout stuff
  */
 
 .container {
-  width: 90%;
-  align-self: center;
+    width: 90%;
+    align-self: center;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  color: #545149;
-  background-color: #f4f1ec;
-  margin-top: 100px;
-  font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: #545149;
+    background-color: #f4f1ec;
+    margin-top: 100px;
+    font-size: 24px;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
- /* responsive design using media queries */
 
- @media only screen and (min-width: 1024px) {
-  body {
-    display: flex;
-    flex-direction: row;
-  } 
+/* responsive design using media queries for tablet */
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 50%
-  }
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 45%;
+    }
+    #navigation-header {
+        margin-right: 3rem;
+        margin-left: 3rem;
+        margin-top: 5em;
+        width: 40%
+    }
+}
 
-  #navigation-header {
-    margin-right: 3rem;
-    margin-left: 3rem;
-    width: 40%
-  }
 
-  .new-tweet {
-    
-  }
-};
+/* responsive design using media queries for desktop  */
 
+@media only screen and (min-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 50%;
+    }
+    #navigation-header {
+        margin-right: 3rem;
+        margin-left: 3rem;
+        margin-top: 5em;
+        width: 40%
+    }
+}
+
+;
 
 /* 
 Layout shifter example */
+
+
 /* .container {
   display: -webkit-flex;
   display: flex;

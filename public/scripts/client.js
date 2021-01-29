@@ -32,25 +32,23 @@ $(document).ready(function () {
       const form = $(this);
       const text = form.serialize();
       const characterCount = $("#tweet-text").val().length;
+      const noSpaceOnlyAsText = $("#tweet-text").val().trim();
       console.log("working");
       if (characterCount > 140) {
         $('.error-message').addClass('error-message-visible').html('I pity the fool who type so much!').hide().slideDown();
-
-      }
-      else if (characterCount === 0 || characterCount === null || characterCount === "") {
+      } else if (characterCount === 0 || characterCount === null || characterCount === "" || noSpaceOnlyAsText === "") {
         $('.error-message').addClass('error-message-visible').html('Your say matters. Give us some characters yo!').hide().slideDown();
-      }
-      else {
+      } else {
         $.ajax({
           method: "POST",
           data: text,
           url: '/tweets/'
         }).then(() => {
           $('#tweets-container').empty();
-          loadTweets()
-          $("#tweet-text").val('')
+          loadTweets();
+          $("#tweet-text").val('');
           $(".counter").text("140");
-        })  //before loadTweets() wasnt working now we put it in an anonymous arrow function and its working //is this needed?
+        }) //before loadTweets() wasnt working now we put it in an anonymous arrow function and its working //is this needed?
           .catch((error) => { console.log(error); });
       }
     });
@@ -107,4 +105,3 @@ $(document).ready(function () {
   loadTweets();
 
 });
-
